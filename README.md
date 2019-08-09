@@ -1,15 +1,15 @@
-*-
-* Free/Libre Near Field Communication (NFC) library
-* 
-* Libnfc historical contributors:
+Free/Libre Near Field Communication (NFC) library
+=================================================
+`libnfc` historical contributors:
+
 * Copyright (C) 2009      Roel Verdult
 * Copyright (C) 2009-2013 Romuald Conty
 * Copyright (C) 2010-2012 Romain Tartière
 * Copyright (C) 2010-2013 Philippe Teuwen
 * Copyright (C) 2012-2013 Ludovic Rousseau
-* Additional contributors:
+
+Additional contributors:
 * See AUTHORS file
--*
 
 General Information
 ===================
@@ -72,7 +72,7 @@ Troubleshooting
 Binaries
 --------
 If the tools fail to work properly, try installing
-`[libnfc](https://packages.debian.org/search?keywords=libnfc)` from the Debian repository.
+[`libnfc`](https://packages.debian.org/search?keywords=libnfc) from the Debian repository.
 
 Blacklist
 ---------
