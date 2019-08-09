@@ -431,8 +431,8 @@ write_card(int write_block_zero)
       }
     } else {
       // The first block 0x00 is read only, skip this
-      if (uiBlock == 0 && ! write_block_zero && ! magic2)
-        continue;
+      ////if (uiBlock == 0 && ! write_block_zero && ! magic2)
+      ////  continue;
 
 
       // Make sure a earlier write did not fail
