@@ -18,11 +18,12 @@ This is a fork of the `libnfc` library that should work with the SCL3711 NFC rea
 UUID writable MIFARE Classic cards.
 For more information about `libnfc` please see the original [repository](https://github.com/nfc-tools/libnfc).
 
-Requirements
-============
+Sources
+=======
 
-* SCL3711 USB reader/writer
-* libusb-0.1
+* https://github.com/nfc-tools/libnfc
+* https://gist.github.com/alphazo/3303282
+* http://nfc-tools.org/index.php/Libnfc
 
 Installation
 ============
@@ -72,7 +73,15 @@ Troubleshooting
 Binaries
 --------
 If the tools fail to work properly, try installing
-[`libnfc`](https://packages.debian.org/search?keywords=libnfc) from the Debian repository.
+[`libnfc`](https://packages.debian.org/search?keywords=libnfc) from the Debian repository for the tools that
+don’t need to be patched (patching is only required to directly write to block `0x00`, containing the UUID).
+
+SCL3711
+-------
+Libnfc cannot be used concurrently with the PCSC proprietary driver of SCL3711.
+Two possible solutions:
+* Either you don't install SCL3711 driver at all
+* Or you stop the PCSC daemon when you want to use libnfc-based tools
 
 Blacklist
 ---------
@@ -82,17 +91,10 @@ It might also be necessary to blacklist `pn533_usb`:
 sudo modprobe -r pn533_usb
 ```
 
-SCL3711
--------
-Libnfc cannot be used concurrently with the PCSC proprietary driver of SCL3711.
-Two possible solutions:
-* Either you don't install SCL3711 driver at all
-* Or you stop the PCSC daemon when you want to use libnfc-based tools
-
 Proprietary Notes
 =================
 
-FeliCa is s registered trademark of the Sony Corporation.
-MIFARE is a trademark of NXP Semiconductors.
-Jewel Topaz is a trademark of Innovision Research & Technology.
-All other trademarks are the property of their respective owners.
+* FeliCa is s registered trademark of the Sony Corporation.
+* MIFARE is a trademark of NXP Semiconductors.
+* Jewel Topaz is a trademark of Innovision Research & Technology.
+* All other trademarks are the property of their respective owners.
